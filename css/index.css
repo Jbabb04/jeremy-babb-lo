@@ -10,14 +10,40 @@ section {
 #About {
   text-align: left;
   background-color: lightblue;
-  padding: 20px;
+  padding: 1em;
   border: 1px solid black;
+}
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: row;
+  background-color: aqua;
+  border-radius: 0.8em;
+  padding: 0.5em;
+  width: 20em;
+}
+
+.one-experience {
+  display: flex;
+  flex-direction: column;
+}
+
+.date {
+  font-weight: bold;
+  margin-right: 1em;
+  min-width: fit-content;
 }
 
 #name {
   font-family: fantasy;
   font-size: 3rem;
-  padding-top: auto;
+  padding-top: 0.5;
   background-color: aqua;
   text-align: center;
   border-radius: 10%;
@@ -33,23 +59,6 @@ h2 {
   font-size: 3em;
   font-weight: bold;
   color: #43b31afb;
-}
-
-#Experience ul {
-  display: flex;
-  flex-direction: row;
-  font-size: 0.9em;
-  color: blue;
-  list-style: none;
-}
-
-#Experience ul li {
-  width: 10em;
-  height: 15em;
-  border-radius: 10%;
-  margin: 1em;
-  padding: 1em;
-  background-color: yellow;
 }
 
 #os-img {
@@ -123,4 +132,9 @@ h2 {
 #Projects,
 #Connect {
   scroll-margin-top: 3em;
+}
+
+@media only screen and (min-width: 600px) {
+  
+
 }

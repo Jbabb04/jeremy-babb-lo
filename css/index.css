@@ -1,13 +1,14 @@
 body {
   background-color: rgb(255, 166, 0);
   color: rgb(122, 34, 203);
+  margin: 0;
 }
 section {
   margin-top: auto;
   margin-bottom: auto;
 }
 
-#About {
+#About p {
   text-align: left;
   background-color: lightblue;
   padding: 1em;
@@ -72,12 +73,7 @@ h2 {
   opacity: 0.9;
 }
 
-#Connect {
-  font-style: italic;
-  background-color: rgb(197, 173, 230);
-  padding: 20px;
-  border: 1px solid black;
-}
+
 #Connect ul {
   display: flex;
   flex-direction: row;
@@ -135,6 +131,15 @@ h2 {
 }
 
 @media only screen and (min-width: 600px) {
-  
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
 
 }
+
+@media only screen and (min-width: 1150px)  {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+  

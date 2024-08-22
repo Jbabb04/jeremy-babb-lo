@@ -52,8 +52,13 @@ section {
   padding-top: 2ch;
   display: flex;
   justify-content: center;
-  margin-top: 2em;
+  margin-top: 6em; /* mobile first */
 }
+
+section, #name-container{
+  margin-left: 1em;
+}
+
 h2 {
   text-align: left;
   font-size: 3em;
@@ -62,14 +67,14 @@ h2 {
 }
 
 #os-img {
-  position: fixed;
+  position: fixed; /* Fixed postion to cover the entire page*/
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
-  object-fit: cover;
-  opacity: 0.9;
+  z-index: -1; /* Move the image below other content */
+  object-fit: cover; /* Cover the wntire space with the  */
+  opacity: 0.9; /* Adjust iamge opacity as needed */
 }
 
 #Connect {
@@ -94,7 +99,9 @@ h2 {
   padding: 1em;
 }
 #navigation {
-  position: fixed;
+  position: sticky;
+  display: flex;
+  justify-content: center;
   top: 0;
   background-color: rgb(255, 166, 0);
   opacity: 100%;
@@ -103,8 +110,8 @@ h2 {
 
 #navigation ul {
   display: flex;
+  flex-direction:column;
   justify-content: center;
-  gap: 4em;
   padding-bottom: 0;
   list-style: none;
 }
@@ -131,7 +138,7 @@ h2 {
 #Ekills,
 #Projects,
 #Connect {
-  scroll-margin-top: 3em;
+  scroll-margin-top: 9em;
 }
 
 @media only screen and (min-width: 600px) {

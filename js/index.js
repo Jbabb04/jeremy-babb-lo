@@ -16,6 +16,5 @@ for (let skill of skillsList) {
     let skillLI = document.createElement('li');
     skillLI.innerHTML = skill;
     skillsUL.appendChild(skillLI);
-    
 }
 console.log("I am from Javascript"); 

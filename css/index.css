@@ -48,6 +48,7 @@ section {
   background-color: aqua;
   text-align: center;
   border-radius: 10%;
+  color: blue;
 }
 #name-container {
   padding-top: 2ch;

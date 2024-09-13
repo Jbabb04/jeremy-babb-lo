@@ -102,8 +102,8 @@ function makeEditButton() {
     oldEditButton.hidden = true;
 
     // don't display the old remove button while editing
-    let oldRemoveButton = entry.querySelector("button.remove-button");
-    oldRemoveButton.hidden = true;
+    //let oldRemoveButton = entry.querySelector("button.remove-button");
+    //oldRemoveButton.hidden = true;
 
     // get the entry's unique id so its content can be used in the form
     let uid = entry.getAttribute("id");

@@ -82,7 +82,7 @@ function makeRemoveButton() {
     entry.remove();
     if (messageList.childElementCount === 0) {
       messageSection.hidden = true;
-    };
+    }
   });
   return removeButton;
 }
@@ -129,3 +129,41 @@ function makeEditButton() {
   });
   return editButton;
 }
+
+// Create a fetch for github repos
+const userName = 'Jbabb04';
+fetch(`https://api.github.com/users/${userName}/repos`)
+  .then((response) => {
+    if (response.ok) {
+      return response.json();
+    } else {
+      throw new Error("Failed to fetch repositories");
+    }
+  })
+  .then((data) => {
+    //const repositories = JSON.parse(data);
+    //console.log(repositories);
+    console.log("data", data);
+    //DOM Selection to select the projects section by id
+    const projectSection = document.getElementById("Projects");
+
+    // Create a ul in the projects section
+    let projectsList = document.createElement("ul");
+    projectSection.appendChild(projectsList);
+
+    for (let repository of data) {
+      // Create a new list item element
+      let project = document.createElement("li");
+      // Set the inner text of the project variable to the current repository's name and property
+      project.innerText = repository.name;
+      // Append the project element to the projectList element
+      projectsList.appendChild(project);
+    }
+  })
+  .catch((error) => {
+    if (error instanceof SyntaxError) {
+      console.error("Unparsable response from server");
+    } else {
+      console.error("Error fetching data: ", error.message);
+    }
+  });

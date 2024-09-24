@@ -1,8 +1,9 @@
 body {
-  background-color: rgb(255, 166, 0);
-  color: rgb(122, 34, 203);
+  background-color: rgb(255, 166, 0); /* Adjust this if your outer space background is already applied as an image */
+  color: rgba(255, 255, 255, 0.85); /* Lightened text color for better contrast */
   margin: 0;
 }
+
 section {
   margin-top: auto;
   margin-bottom: auto;
@@ -10,9 +11,10 @@ section {
 
 #About p {
   text-align: left;
-  background-color: lightblue;
+  background-color: rgba(135, 206, 250, 0.8); /* Slight transparency to blend with background */
   padding: 1em;
   border: 1px solid black;
+  color: #000; /* Dark text on a light background for better readability */
 }
 
 .grid-container {
@@ -24,10 +26,11 @@ section {
 .grid-item {
   display: flex;
   flex-direction: row;
-  background-color: aqua;
+  background-color: rgba(0, 255, 255, 0.7); /* Semi-transparent aqua to soften against background */
   border-radius: 0.8em;
   padding: 0.5em;
   width: 20em;
+  color: #000; /* Dark text for better readability */
 }
 
 .one-experience {
@@ -45,22 +48,24 @@ section {
   font-family: fantasy;
   font-size: 3rem;
   padding-top: 0.5;
-  background-color: aqua;
+  background-color: rgba(0, 255, 255, 0.7); /* Semi-transparent for better integration with background */
   text-align: center;
   border-radius: 10%;
-  color: blue;
+  color: #fff; /* White text to contrast better */
 }
+
 #name-container {
   padding-top: 2ch;
   display: flex;
   justify-content: center;
   margin-top: 2em;
 }
+
 h2 {
   text-align: left;
   font-size: 3em;
   font-weight: bold;
-  color: #43b31afb;
+  color: rgba(255, 255, 255, 0.9); /* Lightened color for better contrast against dark backgrounds */
 }
 
 #os-img {
@@ -71,9 +76,8 @@ h2 {
   height: 100%;
   z-index: -1;
   object-fit: cover;
-  opacity: 0.9;
+  opacity: 0.85; /* Reduced opacity for a more subtle effect */
 }
-
 
 #Connect ul {
   display: flex;
@@ -85,11 +89,13 @@ h2 {
 #Connect ul li {
   width: auto;
   height: 2em;
-  background-color: aqua;
+  background-color: rgba(0, 255, 255, 0.7); /* Adjusted background for better harmony with the outer space theme */
   border-radius: 10%;
   margin: 0em;
   padding: 1em;
+  color: #000; /* Dark text to contrast with the lighter background */
 }
+
 #navigation {
   position: fixed;
   top: 0;
@@ -135,12 +141,10 @@ h2 {
   .grid-container {
     grid-template-columns: 1fr 1fr;
   }
-
 }
 
-@media only screen and (min-width: 1150px)  {
+@media only screen and (min-width: 1150px) {
   .grid-container {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
-  
